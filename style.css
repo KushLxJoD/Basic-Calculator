@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.display {
+    background: linear-gradient(135deg, #e3cc81, #f17bdd);
+    font-size: 2.2rem;
+    font-weight: 400;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#history {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    margin-bottom: 5px;
+    min-height: 20px;
+}
+
+#result {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    color: white;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-clear {
+    background: linear-gradient(135deg, #f1637f, #ed61c1);
+    color: white;
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    color: white;
+}
+
+.btn-operator {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-number {
+    background: rgba(255, 255, 255, 0.85);
+    color: #2c3e50;
+}
+
+.btn-equals {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: white;
+}
+
+.btn-percent {
+    background: linear-gradient(135deg, #fcd34d, #fbbf24);
+    color: white;
+}
+
+@media (max-width:400px) {
+    .calculator {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .display {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
